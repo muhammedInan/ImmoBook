@@ -104,6 +104,10 @@ class User implements UserInterface
         $this->ads = new ArrayCollection();
     }
 
+    public function getFullName(){
+        return "{$this->firstName} {$this->lastName}";
+    }
+
     public function getId(): ?int
     {
         return $this->id;
